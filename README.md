@@ -21,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 - Run the app
 ``` npm start ```
 # Author
-**Ukwishaka Levy**
+**Ackon Samuel**
 - GitHub: [@AckonSamuel](https://github.com/AckonSamuel/)
 - Twitter: [@AckonSamuel2](https://twitter.com/AckonSamuel2)
 ## :handshake: Contributing
