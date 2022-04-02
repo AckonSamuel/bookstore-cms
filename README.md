@@ -22,8 +22,8 @@ To get a local copy up and running follow these simple example steps.
 ``` npm start ```
 # Author
 **Ukwishaka Levy**
-- GitHub: [@levy002](https://github.com/AckonSamuel/)
-- Twitter: [@levy_ukwishaka](https://twitter.com/AckonSamuel2)
+- GitHub: [@AckonSamuel](https://github.com/AckonSamuel/)
+- Twitter: [@AckonSamuel2](https://twitter.com/AckonSamuel2)
 ## :handshake: Contributing
 Contributions, issues, and feature requests are welcome!
 ## Show your support
