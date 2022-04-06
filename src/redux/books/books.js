@@ -1,7 +1,13 @@
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  'Mind Power',
+  'Holy Bible',
+  'The Richest Man in Babylon',
+  'The Secret',
+  'Radical Honesty',
+];
 
 const AddBook = (book) => ({
   type: ADD_BOOK,
