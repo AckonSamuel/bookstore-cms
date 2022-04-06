@@ -6,17 +6,20 @@ import './index.css';
 import Navbar from './components/NavBar';
 import Categories from './components/Categories';
 import App from './App';
+import store from './redux/configureStore';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
