@@ -2,4 +2,8 @@ const CHECK_STATUS = 'CHECK_STATUS';
 
 const initialState = [];
 
-const status = 
+export const Status = (status) => ({
+  type: CHECK_STATUS,
+  status,
+});
+
