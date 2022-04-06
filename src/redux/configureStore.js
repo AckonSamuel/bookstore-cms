@@ -6,3 +6,5 @@ const reducers = combineReducers({
   BookReducer,
   CategoriesReducer,
 });
+
+const store = createStore(reducers);
