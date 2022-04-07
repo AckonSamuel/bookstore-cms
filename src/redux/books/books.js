@@ -2,11 +2,27 @@ const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = [
-  'Mind Power',
-  'Holy Bible',
-  'The Richest Man in Babylon',
-  'The Secret',
-  'Radical Honesty',
+  {
+    category: 'Science',
+    title: 'The Nature of Nature',
+    author: 'Enric Sala',
+    chapter: '2',
+    completed: '5',
+  },
+  {
+    category: 'Enginnering',
+    title: 'The Design of Everyday Things',
+    author: 'Donald A. Norman',
+    chapter: '5',
+    completed: '8',
+  },
+  {
+    category: 'Literature',
+    title: 'The Art of War',
+    author: 'Sun-Tsu',
+    chapter: 'Laying Plans',
+    completed: '0',
+  },
 ];
 
 const AddBook = (book) => ({
