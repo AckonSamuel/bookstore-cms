@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Status } from '../redux/categories/categories';
 import Button from './Button';
 
-
 const Categories = () => {
   const Categories = useSelector((state) => state.CategoriesReducer);
   const dispatch = useDispatch();
