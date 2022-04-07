@@ -1,7 +1,20 @@
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    title: 'The Nature of Nature',
+    author: 'Enric Sala',
+  },
+  {
+    title: 'The Design of Everyday Things',
+    author: 'Donald A. Norman',
+  },
+  {
+    title: 'The Art of War',
+    author: 'Sun-Tsu',
+  },
+];
 
 const AddBook = (book) => ({
   type: ADD_BOOK,
