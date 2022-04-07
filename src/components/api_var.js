@@ -15,3 +15,25 @@ const saveBook = async ({
   }).then((res) => res.status);
   return result;
 };
+
+const loadBooks = async () => {
+  const result = await fetch(`${api}/books`).then((res) => res.json())
+    .then((result) => result);
+
+  const bookArr = Object.entries(result.data)
+    .map(([id, book]) => ({ ...book[0], id: Number(id), type: book[0].category }));
+  return bookArr;
+};
+
+const removeBook = async (id) => {
+  const result = await fetch(`${api}/books/${id}`, {
+    method: 'DELETE',
+    body: JSON.stringify({ item_id: id }),
+    headers: {
+      'Content-type': 'application/json; charset=utf-8',
+    },
+  }).then((res) => res.status);
+  return result;
+};
+
+export { saveBook, loadBooks, removeBook };
