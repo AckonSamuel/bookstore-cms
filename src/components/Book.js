@@ -14,7 +14,12 @@ const Book = ({ title, author }) => {
         <p id="author">{author}</p>
 
         <div className="btn-container">
-          <Button buttonType="button" text="Remove" id="btn-remove" onClick={(book) => dispatch(RemoveBook(book))} />
+          <Button
+            buttonType="button"
+            text="Remove"
+            id="btn-remove"
+            onClick={(book) => dispatch(RemoveBook(book))}
+          />
           <Button buttonType="button" text="Edit" id="btn-edit" />
         </div>
       </>
