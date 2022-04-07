@@ -13,11 +13,8 @@ const BookList = () => {
           {
          books.length !== 0 ? books.map((book) => (
            <Book
-             category={book.category}
              title={book.title}
              author={book.author}
-             chapter={book.chapter}
-             completed={book.completed}
              key={uuidv4()}
            />
          )) : <h4>NO BOOKS AVAILABLE</h4>
