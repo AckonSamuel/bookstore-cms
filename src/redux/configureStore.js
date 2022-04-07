@@ -8,6 +8,6 @@ const reducers = combineReducers({
   CategoriesReducer,
 });
 
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(thunk));
 
 export default store;
