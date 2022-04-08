@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import { RemoveBook } from '../redux/books/books';
 import Button from './Button';
 
-const Book = ({ title, author }) => {
+const Book = ({
+  title, author, bookId, bookIndex,
+}) => {
   const dispatch = useDispatch();
 
   return (
@@ -14,12 +16,17 @@ const Book = ({ title, author }) => {
         <p id="author">{author}</p>
 
         <div className="btn-container">
-          <Button
-            buttonType="button"
-            text="Remove"
-            id="btn-remove"
-            onClick={(book) => dispatch(RemoveBook(book))}
-          />
+
+          <button
+            book-index={bookIndex}
+            onClick={(e) => {
+              const index = Number(e.target.getAttribute('book-index'));
+              dispatch(RemoveBook(index, bookId));
+            }}
+            type="button"
+          >
+            Remove
+          </button>
           <Button buttonType="button" text="Edit" id="btn-edit" />
         </div>
       </>
@@ -30,6 +37,8 @@ const Book = ({ title, author }) => {
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  bookId: PropTypes.string.isRequired,
+  bookIndex: PropTypes.number.isRequired,
 };
 
 export default Book;

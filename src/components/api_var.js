@@ -1,10 +1,9 @@
-const appId = 'jJNxznO6whEuCrcGj1r6';
+const appId = 'qORDqXRczV8lhB5tZQjX';
 const api = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}`;
 
 const saveBook = async ({
   id, title, type, author,
 }) => {
-  console.log(id, title, author, type);
   const result = await fetch(`${api}/books`, {
     method: 'POST',
     body: JSON.stringify({
@@ -20,10 +19,9 @@ const saveBook = async ({
 const loadBooks = async () => {
   const result = await fetch(`${api}/books`).then((res) => res.json())
     .then((response) => response);
-  console.log(result);
 
   const bookArr = Object.entries(result)
-    .map(([book]) => ({ ...book[0], id: book[0].id, type: book[0].category }));
+    .map(([id, book]) => ({ ...book[0], id: Number(id), type: book[0].category }));
   return bookArr;
 };
 
