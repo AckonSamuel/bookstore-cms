@@ -1,9 +1,8 @@
 const imuser = {
-  width: '2.813rem',
-  height: '2.813rem',
-  margin: '0 0 0 41.5rem',
-  padding: '0.875rem',
-  border: 'solid 1px var(--grey-border)',
+  width: '4.813%',
+  height: '2.813%',
+  padding: '0.875%',
+  border: 'solid 1px grey',
   color: 'var(--azure)',
 };
 
