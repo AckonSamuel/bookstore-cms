@@ -60,6 +60,7 @@ const Form = () => {
         />
 
         <select
+          id="catecate"
           required
           onChange={trackChange}
           value={book.type}
