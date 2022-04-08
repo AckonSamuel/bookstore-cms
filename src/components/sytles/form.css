@@ -1,5 +1,5 @@
 .form-container {
-    width: 91%;
+  width: 91%;
 }
 
 .form-container h4 {
@@ -12,20 +12,20 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
-  color: #888888;
+  color: #888;
 }
 
 .book-form {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
 }
 
 #book-author,
 #book-title {
-    min-width: 25%;
+  min-width: 25%;
   height: 40%;
   font-size: 1.2rem;
   margin: 0.6% 0.6% 0 0;
@@ -36,7 +36,7 @@
 }
 
 #submit {
-    min-width: 10.938%;
+  min-width: 10.938%;
   height: 2.125%;
   font-family: RobotoSlab;
   font-size: 0.813rem;
@@ -53,12 +53,12 @@
 }
 
 #catecate {
-    width: 20%;
-    height: 2.813%;
-     margin: 0.6% 0.6% 0 0;
+  width: 20%;
+  height: 2.813%;
+  margin: 0.6% 0.6% 0 0;
   padding: 0.4% 2% 0.4% 2%;
   border-radius: 4px;
-    border: solid 1px grey;
-    background-color: #fff;
-    font-size: 1.2rem;
+  border: solid 1px grey;
+  background-color: #fff;
+  font-size: 1.2rem;
 }
