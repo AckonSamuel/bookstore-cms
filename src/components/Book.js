@@ -32,6 +32,7 @@ const Book = ({
           <Button buttonType="button" text="Edit" id="btn-edit" />
         </div>
       </>
+      <div className="current-progress">
     </div>
   );
 };
