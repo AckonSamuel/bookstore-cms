@@ -1,7 +1,8 @@
 .sub-root {
-  background: rgb(242, 240, 240);
+  background:#fafafa;
   width: 87.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 5px 50px 50px rgba(60, 63, 65, 0.7);
 }

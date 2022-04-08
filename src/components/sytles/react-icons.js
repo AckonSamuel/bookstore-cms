@@ -4,7 +4,7 @@ const imuser = {
   padding: '0.875%',
   border: 'solid 1px grey',
   borderRadius: '50%',
-  color: 'blue',
+  color: '#0290ff',
 };
 
 export default imuser;

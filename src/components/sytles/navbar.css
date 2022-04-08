@@ -8,6 +8,7 @@ nav {
     width: 87.5%;
     padding: 1.438% 6.188% 1.688% 6.25%;
     background-color: #fff;
+    box-shadow: 5px 5px 50px rgba(52, 58, 62, 0.7);
   }
 
   #logo {
@@ -20,7 +21,7 @@ nav {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: blue;
+    color: #0290ff
   }
 
   .BOOKS {

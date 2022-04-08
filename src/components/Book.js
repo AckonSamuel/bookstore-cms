@@ -14,6 +14,7 @@ const Book = ({
   return (
     <div className="book-container">
       <div className="bk-oc">
+        <h1 id="categor">Action</h1>
         <h2 id="title">{title}</h2>
         <p id="author">{author}</p>
         <div className="btn-container">

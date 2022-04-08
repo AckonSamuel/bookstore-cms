@@ -12,7 +12,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
-  color: var(--warm-grey);
+  color: #888888;
 }
 
 .book-form {
@@ -22,6 +22,7 @@
     align-items: center;
     gap: 1rem;
 }
+
 #book-author,
 #book-title {
     width: 20%;
