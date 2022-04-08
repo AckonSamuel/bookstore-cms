@@ -35,6 +35,11 @@ const Book = ({
       <div className="current-progress">
         <ProgressBar />
       </div>
+      <div className="update-progress">
+        <p>Hello</p>
+        <p>Heya</p>
+        <Button buttonType="button" text="Current Chapter" id="btn-chapter" />
+      </div>
     </div>
   );
 };
