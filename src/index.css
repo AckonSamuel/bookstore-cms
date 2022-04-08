@@ -28,7 +28,7 @@ code {
 
 #root {
   width: 100%;
-  height: 89.625%;
+  height:100vh;
   padding: 9.313% 3.75% 7.688% 6.25%;
   background-color: rgb(207, 204, 204);
   /* overflow-x: hidden; */

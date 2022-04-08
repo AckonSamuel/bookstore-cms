@@ -13,10 +13,9 @@ const Book = ({
 
   return (
     <div className="book-container">
-      <>
+      <div className="bk-oc">
         <h2 id="title">{title}</h2>
         <p id="author">{author}</p>
-
         <div className="btn-container">
           <Button buttonType="button" text="Comment" id="btn-comment" />
           <button
@@ -32,8 +31,10 @@ const Book = ({
           </button>
           <Button buttonType="button" text="Edit" id="btn-edit" />
         </div>
-      </>
+      </div>
       <div className="current-progress">
+        <ProgressBar />
+      </div>
     </div>
   );
 };
