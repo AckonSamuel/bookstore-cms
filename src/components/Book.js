@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { RemoveBook } from '../redux/books/books';
 import Button from './Button';
+import './sytles/book.css';
 
 const Book = ({
   title, author, bookId, bookIndex,
