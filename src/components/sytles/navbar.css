@@ -23,7 +23,7 @@ a {
 #logo {
   width: 20%;
   margin: 0.375% 0 0.125% 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -37,7 +37,7 @@ a {
   width: 3.688%;
   height: 1%;
   margin: 1.125% 2.563% 0.688% 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -52,7 +52,7 @@ a {
   height: 1%;
   margin: 1.125% 41.5% 0.688% 2.563%;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;

@@ -5,7 +5,7 @@
 .form-container h4 {
   height: 1.5%;
   margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.3em;
   font-weight: bold;
   font-stretch: normal;
@@ -38,7 +38,7 @@
 #submit {
   min-width: 10.938%;
   height: 2.125%;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
   font-weight: bold;
   font-stretch: normal;
