@@ -10,6 +10,7 @@ const Form = () => {
     id: '',
     title: '',
     author: '',
+    type: '',
   });
 
   const trackChange = (e) => {
@@ -30,7 +31,13 @@ const Form = () => {
   return (
     <div className="form-container">
       <h4>ADD NEW BOOK</h4>
-      <form className="book-form" onSubmit={submitBook}>
+      <form
+        className="book-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          submitBook();
+        }}
+      >
         <input
           id="book-title"
           name="title"
@@ -50,6 +57,18 @@ const Form = () => {
           onChange={trackChange}
           required
         />
+
+        <select
+          required
+          onChange={trackChange}
+          value={book.type}
+        >
+          <option disabled> Category</option>
+          <option value="Science" name="Science"> Science</option>
+          <option value="Law" name="Law"> Law</option>
+          <option value="Engineering" name="Engineering"> Engineering</option>
+          <option value="Religion" name="Religion"> Religion</option>
+        </select>
 
         <Button text="ADD BOOK" buttonType="submit" id="submit" />
       </form>
