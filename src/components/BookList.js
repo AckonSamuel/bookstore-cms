@@ -1,21 +1,22 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector, shallowEqual } from 'react-redux';
 import Book from './Book';
 
 const BookList = () => {
-  const books = useSelector((state) => state.BookReducer);
+  const books = useSelector((state) => state.BookReducer.books, shallowEqual);
 
   return (
     <>
       <ul className="allBooks">
         <li className="bookInfo">
           {
-         books.length !== 0 ? books.map((book) => (
+         books.length !== 0 ? books.map((book, i) => (
            <Book
              title={book.title}
              author={book.author}
-             key={uuidv4()}
+             key={book.title}
+             bookIndex={i}
+             bookId={book.id}
            />
          )) : <h4>NO BOOKS AVAILABLE</h4>
 }
