@@ -17,11 +17,16 @@ const saveBook = async ({
 };
 
 const loadBooks = async () => {
-  const result = await fetch(`${api}/books`).then((res) => res.json())
-    .then((result) => result);
-
+  let result = await fetch(`${api}/books`, {
+    method: 'GET',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  result = await result.json();
+  console.log(result);
   const bookArr = Object.entries(result.data)
-    .map(([id, book]) => ({ ...book[0], id: Number(id), type: book[0].category }));
+    .map(([id, book]) => ({ ...book[0], id, type: book[0].category }));
   return bookArr;
 };
 

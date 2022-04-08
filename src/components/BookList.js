@@ -1,9 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import Book from './Book';
 
 const BookList = () => {
-  const books = useSelector((state) => state.BookReducer);
+  const books = useSelector((state) => state.BookReducer.books);
 
   return (
     <>
@@ -14,7 +15,7 @@ const BookList = () => {
            <Book
              title={book.title}
              author={book.author}
-             key={}
+             key={uuidv4()}
            />
          )) : <h4>NO BOOKS AVAILABLE</h4>
 }

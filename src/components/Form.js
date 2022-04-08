@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { AddBook } from '../redux/books/books';
 import Button from './Button';
 
@@ -15,6 +16,7 @@ const Form = () => {
     const { name, value } = e.target;
     setBook((prevBook) => ({
       ...prevBook,
+      id: uuidv4(),
       [name]: value,
     }));
   };
