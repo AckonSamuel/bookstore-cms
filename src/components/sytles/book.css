@@ -47,3 +47,9 @@
     color: rgb(60, 60, 255);
     border: none;
 }
+
+#btn-remove {
+    padding: 0 0.3rem;
+    border-right: 2px solid #aaa;
+    border-left: 2px solid #aaa;
+}

@@ -17,7 +17,7 @@ const Book = ({
         <p id="author">{author}</p>
 
         <div className="btn-container">
-
+          <Button buttonType="button" text="Comment" id="btn-comment" />
           <button
             id="btn-remove"
             book-index={bookIndex}
@@ -30,7 +30,6 @@ const Book = ({
             Remove
           </button>
           <Button buttonType="button" text="Edit" id="btn-edit" />
-          <Button buttonType="button" text="Comment" id="btn-comment" />
         </div>
       </>
     </div>
