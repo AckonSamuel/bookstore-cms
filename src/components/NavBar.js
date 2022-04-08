@@ -6,7 +6,7 @@ import imuser from './sytles/react-icons';
 
 const Navbar = () => (
   <nav>
-    <span id="logo">Bookstore</span>
+    <span id="logo">Bookstore CMS</span>
     <>
       <span className="BOOKS"><Link to="/">Books</Link></span>
       <span className="CATEGORIES"><Link to="/categories">Categories</Link></span>
