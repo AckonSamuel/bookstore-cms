@@ -17,7 +17,7 @@ const Form = () => {
     const { name, value } = e.target;
     setBook((prevBook) => ({
       ...prevBook,
-      id: uuidv4(),
+      id: uuidv4().toString(),
       [name]: value,
     }));
   };

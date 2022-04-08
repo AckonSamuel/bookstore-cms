@@ -21,7 +21,7 @@ const loadBooks = async () => {
     .then((response) => response);
 
   const bookArr = Object.entries(result)
-    .map(([id, book]) => ({ ...book[0], id: Number(id), type: book[0].category }));
+    .map(([id, book]) => ({ ...book[0], id, type: book[0].category }));
   return bookArr;
 };
 
