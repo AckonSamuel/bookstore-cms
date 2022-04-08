@@ -7,3 +7,5 @@ const ProgressBar = () => (
     <CircularProgressbar value={66} />
   </div>
 );
+
+export default ProgressBar;

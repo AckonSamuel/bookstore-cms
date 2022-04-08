@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { RemoveBook } from '../redux/books/books';
 import Button from './Button';
 import './sytles/book.css';
+import ProgressBar from './Circularprogressbar';
 
 const Book = ({
   title, author, bookId, bookIndex,
