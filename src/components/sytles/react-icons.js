@@ -3,7 +3,8 @@ const imuser = {
   height: '2.813%',
   padding: '0.875%',
   border: 'solid 1px grey',
-  color: 'var(--azure)',
+  borderRadius: '50%',
+  color: 'blue',
 };
 
 export default imuser;

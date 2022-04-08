@@ -2,13 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    outline: solid blue;
 }
 
 nav {
     width: 87.5%;
     height: 5.938%;
-    margin: 0 0 2.375%;
     padding: 1.438% 6.188% 1.688% 6.25%;
     background-color: #fff;
   }

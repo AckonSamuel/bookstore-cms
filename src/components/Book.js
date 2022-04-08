@@ -19,6 +19,7 @@ const Book = ({
         <div className="btn-container">
 
           <button
+            id="btn-remove"
             book-index={bookIndex}
             onClick={(e) => {
               const index = Number(e.target.getAttribute('book-index'));
@@ -29,6 +30,7 @@ const Book = ({
             Remove
           </button>
           <Button buttonType="button" text="Edit" id="btn-edit" />
+          <Button buttonType="button" text="Comment" id="btn-comment" />
         </div>
       </>
     </div>
