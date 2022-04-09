@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { AddBook } from '../redux/books/books';
 import Button from './Button';
+import './sytles/form.css';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -59,6 +60,7 @@ const Form = () => {
         />
 
         <select
+          id="catecate"
           required
           onChange={trackChange}
           value={book.type}

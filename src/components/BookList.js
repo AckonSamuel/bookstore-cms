@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 import Book from './Book';
+import './sytles/booklist.css';
 
 const BookList = () => {
   const books = useSelector((state) => state.BookReducer.books, shallowEqual);
