@@ -28,12 +28,8 @@
 #title {
   width: 70%;
   margin: 0.188% 20.188% 0.05em 0;
-  font-family: 'Roboto Slab', serif;
   font-size: 2rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
   color: #121212;
 }
@@ -46,13 +42,9 @@
 #author {
   width: 6.688%;
   margin-bottom: 2.4em;
-  font-family: 'Roboto Slab', serif;
   font-size: 1.3rem;
   font-weight: 300;
   font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #4386bf;
 }
 
@@ -111,4 +103,12 @@
   color: #121212;
   font-size: 1.4em;
   padding-left: 2.6em;
+}
+
+#title, 
+#author {
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }

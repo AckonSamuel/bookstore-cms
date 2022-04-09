@@ -7,10 +7,6 @@
   margin: 1.813rem 32.75rem 1.188rem 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3em;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
 }
@@ -40,10 +36,6 @@
   height: 2.125%;
   font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
@@ -61,4 +53,12 @@
   border: solid 1px grey;
   background-color: #fff;
   font-size: 1.2rem;
+}
+
+#sumbit,
+.form-container h4 {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }

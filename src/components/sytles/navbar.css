@@ -24,13 +24,8 @@ a {
 #logo {
   width: 20%;
   margin: 0.375% 0 0.125% 0;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #0290ff;
 }
 
@@ -38,14 +33,9 @@ a {
   width: 3.688%;
   height: 1%;
   margin: 1.125% 2.563% 0.688% 0;
-  font-family: 'Montserrat', sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
 }
 
 .CATEGORIES {
@@ -53,12 +43,23 @@ a {
   height: 1%;
   margin: 1.125% 41.5% 0.688% 2.563%;
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;
   font-size: 0.813rem;
-  font-weight: normal;
+  font-weight: normal;;
+  letter-spacing: 1.9px;
+
+}
+
+#logo,
+.BOOKS,
+.CATEGORIES {
+  font-family: 'Montserrat', sans-serif;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: 1.9px;
+  letter-spacing: normal;
+}
+
+.BOOKS,
+.CATEGORIES {
   color: #121212;
 }
