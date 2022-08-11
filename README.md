@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# Bookstore
+# Bookstore-CMS
 
 # Built with
 - React.js
