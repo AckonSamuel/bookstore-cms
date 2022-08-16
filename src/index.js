@@ -5,7 +5,6 @@ import './index.css';
 import Navbar from './components/NavBar';
 import Categories from './components/Categories';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,5 +18,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
-
