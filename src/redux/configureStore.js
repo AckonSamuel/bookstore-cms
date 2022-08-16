@@ -6,7 +6,7 @@ const store = configureStore({
   reducer: {
     BookReducer,
     CategoriesReducer,
-  }
+  },
 });
 
 export default store;
