@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { RemoveBook } from '../redux/books/books';
+import { removeBook } from '../redux/books/books';
 import Button from './Button';
 
 const Book = ({
@@ -21,7 +21,7 @@ const Book = ({
             book-index={bookIndex}
             onClick={(e) => {
               const index = Number(e.target.getAttribute('book-index'));
-              dispatch(RemoveBook(index, bookId));
+              dispatch(removeBook({ index, bookId }));
             }}
             type="button"
           >

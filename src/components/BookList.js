@@ -1,9 +1,10 @@
 import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import Book from './Book';
 
 const BookList = () => {
-  const books = useSelector((state) => state.BookReducer.books, shallowEqual);
+  const books = useSelector((state) => state.BookReducer, shallowEqual);
 
   return (
     <>
@@ -14,7 +15,7 @@ const BookList = () => {
            <Book
              title={book.title}
              author={book.author}
-             key={book.title}
+             key={uuidv4().toString()}
              bookIndex={i}
              bookId={book.id}
            />

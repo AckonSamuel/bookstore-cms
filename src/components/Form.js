@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { AddBook } from '../redux/books/books';
+import { addBook } from '../redux/books/books';
 import Button from './Button';
 
 const Form = () => {
@@ -14,18 +14,17 @@ const Form = () => {
   });
 
   const trackChange = (e) => {
-    const { name, value } = e.target;
-    setBook((prevBook) => ({
-      ...prevBook,
+    e.preventDefault();
+    setBook({
+      ...book,
       id: uuidv4().toString(),
-      [name]: value,
-    }));
+      title: document.querySelector('#book-title').value,
+      author: document.querySelector('#book-author').value,
+    });
   };
 
   const submitBook = () => {
-    dispatch(AddBook(book));
-    document.querySelector('#book-title').value = '';
-    document.querySelector('#book-author').value = '';
+    dispatch(addBook(book));
   };
 
   return (
@@ -36,6 +35,8 @@ const Form = () => {
         onSubmit={(e) => {
           e.preventDefault();
           submitBook();
+          document.querySelector('#book-title').value = '';
+          document.querySelector('#book-author').value = '';
         }}
       >
         <input

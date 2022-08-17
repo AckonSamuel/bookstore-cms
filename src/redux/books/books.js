@@ -1,62 +1,53 @@
-import { saveBook, loadBooks, removeBook } from '../../components/api_var';
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const ADDED_BOOK = 'bookstore/books/ADDED_BOOK';
-
-const LOAD_BOOKS = 'bookstore/books/LOAD_BOOKS';
-const LOADED_BOOKS = 'bookstore/books/LOADED_BOOK';
-
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
-const REMOVED_BOOK = 'bookstore/books/REMOVED_BOOK';
+const FETCH_BOOKS = 'bookstore/books/FETCH_BOOKS';
 
-const AddBook = (book) => (dispatch) => {
-  dispatch({ type: ADD_BOOK });
-  saveBook(book).then((status) => {
-    if (status === 201 || status === 200) {
-      dispatch({ type: ADDED_BOOK, payload: book });
-    }
-  });
-};
+const initialState = [];
 
-const BookLoad = () => (dispatch) => {
-  dispatch({ type: LOAD_BOOKS });
-  loadBooks().then((books) => dispatch({
-    type: LOADED_BOOKS,
-    payload: books,
-  }));
-};
-
-const RemoveBook = (index, id) => (dispatch) => {
-  dispatch({ type: REMOVE_BOOK });
-  removeBook(id).then((status) => {
-    if (status === 201 || status === 200) dispatch({ type: REMOVED_BOOK, payload: index });
-  });
-};
-
-const initialState = {
-  books: [
-  ],
-};
-
-const BookReducer = (state = initialState, action) => {
+export default function BookReducer(state = initialState, action) {
   switch (action.type) {
-    case LOAD_BOOKS:
-    case REMOVE_BOOK:
-    case ADD_BOOK:
-      return { ...state, waiting: true };
-    case ADDED_BOOK:
-      return { ...state, books: [...state.books, action.payload], waiting: false };
-    case LOADED_BOOKS:
-      return { ...state, books: [...state.books, ...action.payload] };
-    case REMOVED_BOOK:
-      return {
-        ...state,
-        books: [...state.books.slice(0, action.payload), ...state.books.slice(action.payload + 1)],
-      };
+    case 'bookstore/books/FETCH_BOOKS/fulfilled':
+      return action.payload;
+    case 'bookstore/books/ADD_BOOK/fulfilled':
+      return [...state, action.payload];
+    case 'bookstore/books/REMOVE_BOOK/fulfilled':
+      return [...state.slice(0, action.payload), ...state.slice(action.payload + 1)];
     default:
       return state;
   }
-};
+}
 
-export { AddBook, RemoveBook, BookLoad };
-export default BookReducer;
+export const addBook = createAsyncThunk(
+  ADD_BOOK,
+  async (book) => {
+    await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/3tOezWN18kXpN04hlHCf/books', {
+      item_id: book.id,
+      title: book.title,
+      author: book.author,
+      category: 'Not Available',
+    });
+    return book;
+  },
+);
+
+export const removeBook = createAsyncThunk(
+  REMOVE_BOOK,
+  async (book) => {
+    const lerr = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/3tOezWN18kXpN04hlHCf/books/${book.bookId}`;
+    await axios.delete(lerr);
+    return book.index;
+  },
+);
+
+export const fetchBooks = createAsyncThunk(
+  FETCH_BOOKS,
+  async () => {
+    const res = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/3tOezWN18kXpN04hlHCf/books');
+    const books = Object.entries(res.data)
+      .map(([id, book]) => ({ ...book[0], id, type: book[0].category }));
+    return books;
+  },
+);
