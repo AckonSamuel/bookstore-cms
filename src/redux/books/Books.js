@@ -21,7 +21,7 @@ const initialState = [
   },
   {
     title: 'Chew along',
-    author: 'Okayito Makudsaiki',
+    author: 'Okayitomjdi Makudsaiki',
     id: uuidv4(),
   },
 ];
