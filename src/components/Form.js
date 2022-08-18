@@ -23,8 +23,6 @@ const Form = () => {
 
   const submitBook = () => {
     dispatch(AddBook(book));
-    document.querySelector('#book-title').value = '';
-    document.querySelector('#book-author').value = '';
   };
 
   return (
