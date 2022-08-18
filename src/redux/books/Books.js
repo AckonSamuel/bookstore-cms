@@ -5,23 +5,23 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = [
   {
-    title: 'Invaluabe',
-    author: 'Maya Grossman',
+    title: 'All day long',
+    author: 'Dreamer',
     id: uuidv4(),
   },
   {
-    title: 'Turn the ship Around',
-    author: 'L. David Marquet',
+    title: 'Upward way',
+    author: 'Worker Lsayer',
     id: uuidv4(),
   },
   {
-    title: 'Dare to Lead,',
-    author: 'Brené Brown',
+    title: 'How to dare,',
+    author: 'Mensrs Ryan',
     id: uuidv4(),
   },
   {
-    title: 'Invaluabe',
-    author: 'Maya Grossman',
+    title: 'Chew along',
+    author: 'Okayito Makudsaiki',
     id: uuidv4(),
   },
 ];
