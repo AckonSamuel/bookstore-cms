@@ -1,20 +1,8 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { checkBookStatus } from '../redux/categories/Categories';
+import React from 'react';
+import Button from './Button';
 
 const Categories = () => {
-  const status = useSelector((state) => state.categories);
-  const dispatch = useDispatch();
-
-  const statusChecker = () => {
-    dispatch(checkBookStatus());
-  };
-  return (
-    <div className="check">
-      <button onClick={statusChecker} type="button">
-        Check status
-      </button>
-      <h4>{status}</h4>
-    </div>
-  );
+  <Button text="Check Status" id="status" buttonType="button" />;
 };
+
 export default Categories;
