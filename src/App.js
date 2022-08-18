@@ -12,10 +12,10 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <div className="sub-root">
       <BookList />
       <Form />
-    </>
+    </div>
   );
 };
 

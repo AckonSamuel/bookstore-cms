@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Bookstore
-
+<img src="./screenshot_necessary.png">
 # Built with
 - React.js
 - CSS
